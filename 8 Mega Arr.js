@@ -16,9 +16,9 @@ function getNoReps(min, max, megaArr) {
 }
 
 function createArr(min,max,long,reps) {
-    let megaArr = [];
+    const megaArr = [];
 
-    if (min + max <= long && !reps) {
+    if (max - min + 1 < long && !reps) {
         throw 'Uncorrect data!';
     }
 
@@ -33,7 +33,7 @@ function createArr(min,max,long,reps) {
 }
 
 try{
-    console.log(createArr(3,9,5,true));
+    console.log(createArr(0,5,6,true));
 } catch (e) {
     console.log(e);
 }

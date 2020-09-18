@@ -1,9 +1,10 @@
 //10. Вывести числа фибоначи
+// TODO: use recursion for fibo with ternary operator
 function fibo(n) {
     let arr = [1, 1];
     let a = 0;
     let b = 1;
-    for (i = 0; i < n - 2; i++){
+    for (let i = 0; i < n - 2; i++){
         arr.push(arr[a++] + arr[b++]);
     }
     return arr;
