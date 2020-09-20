@@ -20,10 +20,22 @@ const data = [
     }
 ];
 
-let arr = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+data.sort(function (a, b) {
+    if (a.age > b.age) {
+        return 1;
+    }
+    if (a.age < b.age) {
+        return -1;
+    }
+    return 0;
+});
 
-function sortir(arr) {
-    return arr.sort((a, b) => a - b);
-}
+console.log(data);
 
-console.log(sortir(arr));
+// let arr = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+//
+// function sortir(arr) {
+//     return arr.sort((a, b) => a - b);
+// }
+//
+// console.log(sortir(arr));

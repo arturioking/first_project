@@ -22,4 +22,41 @@ function findItem(first_arr,second_arr) {
     return arr;
 }
 
+function findItemByForEach(first_arr,second_arr) {
+    const arr = [];
+
+    first_arr.forEach((item) => {
+        if (!second_arr.includes(item)){
+            arr.push(item);
+        }
+    })
+
+    second_arr.forEach((item) => {
+        if (!first_arr.includes(item)){
+            arr.push(item);
+        }
+    });
+
+    return arr;
+}
+
+function findItemWithUseObject(first_arr, second_arr) {
+    const hash = {};
+
+    first_arr.forEach((item) => {
+        if (!second_arr.includes(item)){
+            hash[item] = item;
+        }
+    })
+
+    second_arr.forEach((item) => {
+        if (!first_arr.includes(item)){
+            hash[item] = item;
+        }
+    });
+    return Object.values(hash);
+}
+
 console.log(findItem(first_arr, second_arr));
+console.log(findItemByForEach(first_arr, second_arr));
+console.log(findItemWithUseObject(first_arr, second_arr));

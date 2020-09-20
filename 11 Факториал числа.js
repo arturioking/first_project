@@ -10,4 +10,10 @@ function factorial(n) {
     return result;
 }
 
-console.log(factorial(0));
+function factorialTernary(x) {
+    return x <= 1 ? 1
+        : x * factorial(x - 1);
+}
+
+console.log(factorial(4));
+console.log(factorialTernary(4));

@@ -10,13 +10,13 @@ let num = 50;
 
 function findSumEqual(arr, num) {
     let result = [];
-    for (let i = 0; i < arr.length; i++) {
-            for (let t = i; t < arr.length; t++) {
-                if (arr[i] + arr[t] === num) {
-                    result.push(`${i} ${t}`);
-                }
+    arr.forEach((item) => {
+        for (let i = 1; i < arr.length; i++) {
+            if (item + arr[i] === num) {
+                result.push(`${arr.indexOf(item)} ${i}`);
             }
-    }
+        }
+    });
 return result;
 }
 

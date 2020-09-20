@@ -11,4 +11,17 @@ function delEmptyValue(arr) {
     return arr;
 }
 
+function returnOnlyNumbers(arr) {
+    const result = [];
+    arr.forEach((item) => {
+        if (!!item) {
+            result.push(parseInt(item,10));
+        } if (item === 0) {
+            result.push(parseInt(item,10));
+        }
+    });
+    return result;
+}
+
 console.log(delEmptyValue(arr));
+console.log(returnOnlyNumbers(arr));
